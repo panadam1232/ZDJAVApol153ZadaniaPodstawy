@@ -19,17 +19,22 @@ buzz
  */
 public class Zadanie9 {
     public static void main(String[] args) {
-
+        fizzBuzzInRange(100); // Zadany zakres, np. od 1 do 20
     }
 
+    private static void fizzBuzzInRange(int x) {
+        for (int i = 1; i <= x; i++) {
+            System.out.println(fizzBuzz(i));
+        }
+    }
     private static String fizzBuzz(int number) {
       //if (number % 15 == 0)
         if (number % 3 == 0 && number % 5 == 0) {
-            return "Fuzz";
-        } else if (number % 3 == 0) {
-            return "Buzz";
-        } else if (number % 5 == 0) {
             return "FizzBuzz";
+        } else if (number % 3 == 0) {
+            return "Fizz";
+        } else if (number % 5 == 0) {
+            return "Buzz";
         }
         return String.valueOf(number);
     }
