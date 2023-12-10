@@ -15,12 +15,18 @@ public class Zadanie1 {
 
     }
 
-    private static char getLastCharacter (String input) {
-        if (input == null || input.isBlank()) {
-            System.out.println("Wrong input");
-            return DEFAULT_CHAR;
+    private static char getLastCharacter(String input) {
+        //if (input == null || input.isBlank()) {
+        //    System.out.println("Wrong input");
+        //    return DEFAULT_CHAR;
+        //}
+        //int lastPosition = input.length() - 1;
+        //return input.charAt(lastPosition);
+        if (Utils.isValid(input)) {
+            int lastPosition = input.length() - 1;
+            return input.charAt(lastPosition);
         }
-        int lastPosition = input.length() - 1;
-        return input.charAt(lastPosition);
+        System.out.println("Wrong input");
+        return DEFAULT_CHAR;
     }
 }

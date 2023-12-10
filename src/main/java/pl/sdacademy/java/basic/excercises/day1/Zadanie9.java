@@ -27,8 +27,9 @@ public class Zadanie9 {
             System.out.println(fizzBuzz(i));
         }
     }
+
     private static String fizzBuzz(int number) {
-      //if (number % 15 == 0)
+        //if (number % 15 == 0)
         if (number % 3 == 0 && number % 5 == 0) {
             return "FizzBuzz";
         } else if (number % 3 == 0) {

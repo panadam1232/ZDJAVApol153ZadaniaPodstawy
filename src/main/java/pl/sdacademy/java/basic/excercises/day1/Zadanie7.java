@@ -1,4 +1,5 @@
 package pl.sdacademy.java.basic.excercises.day1;
+
 /*
 Napisz program realizujący prosty kalkulator. Program powinien:
 a) pobrać pierwszą liczbę (typu float);
