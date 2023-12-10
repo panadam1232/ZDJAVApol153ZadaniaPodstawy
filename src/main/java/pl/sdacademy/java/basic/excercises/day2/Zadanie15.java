@@ -12,19 +12,15 @@ Result: false
  */
 public class Zadanie15 {
     public static void main(String[] args) {
-
         String[] arrayOne = new String[]{"Ala", "ma", "kota"};
         String[] arrayTwo = new String[]{"Ala", "ma", "kotaa"};
         boolean isEqual = areArraysCompare(arrayOne, arrayTwo);
         System.out.println(isEqual);
     }
-
     private static boolean areArraysCompare(String[] arrayOne, String[] arrayTwo) {
-
         if (arrayOne.length != arrayTwo.length) {
             return false;
         }
-
         for (int i = 0; i < arrayOne.length; i++) {
             if (arrayOne[i] == null && arrayTwo[i] == null) {
                 continue;
@@ -35,5 +31,4 @@ public class Zadanie15 {
         }
         return true;
     }
-
 }
