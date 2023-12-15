@@ -21,12 +21,18 @@ Input: 4 3 9 4 5 7 6 4 8 8
  */
 public class Zadanie18 {
     public static void main(String[] args) {
+        int[] array = getRandomArray();
+        System.out.println("random array:" + Arrays.toString(array));
+        printResult(array);
+    }
+
+    private static int[] getRandomArray() {
         Random generator = new Random();
         int[] array = new int[10];
         for (int i = 0; i < 10; i++) {
             array[i] = generator.nextInt(9);
         }
-        printResult(array);
+        return array;
     }
 
     private static void printResult(int[] array) {
