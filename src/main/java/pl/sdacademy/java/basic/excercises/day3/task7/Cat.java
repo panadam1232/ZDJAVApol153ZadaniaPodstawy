@@ -3,7 +3,7 @@ package pl.sdacademy.java.basic.excercises.day3.task7;
 import java.util.Objects;
 
 public class Cat {
-    private String name;
+    private final String name;
 
     public Cat(String name) {
         this.name = name;
