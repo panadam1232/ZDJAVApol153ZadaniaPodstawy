@@ -26,11 +26,9 @@ public class Zadanie6 {
         if (multiplier == 0 || multiplicandMax == 0) {
             System.out.println("Wpisano mnożnik x 0");
         }
-        for (int i = 1; i < multiplier; i++) {
-            if (i >= multiplicandMin && i <= multiplicandMax) {
-                sum = multiplier * i;
-                System.out.println(multiplier + " x " + i + " = " + sum);
-            }
+        for (int i = multiplicandMin; i <= multiplicandMax; i++) {
+            sum = multiplier * i;
+            System.out.println(multiplier + " x " + i + " = " + sum);
         }
     }
 }

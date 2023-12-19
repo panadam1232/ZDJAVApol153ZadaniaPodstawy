@@ -13,6 +13,9 @@ Please insert shift: 2
 Encrypted text: dctfbqnwdkgrtqitcoqyce
  */
 public class Zadanie12 {
+    private static final int VALUE_LOWER_A_IN_ASCII = 97;
+    private static final int VALUE_LOWER_Z_IN_ASCII = 122;
+    private static final int DIFF_A_AND_Z_LETTER = 26;
 
     public static void main(String[] args) {
         Scanner keyboardScanner = new Scanner(System.in);
@@ -24,12 +27,15 @@ public class Zadanie12 {
         String result = encryptedText(input, shift);
         System.out.println(result);
     }
+
     private static String encryptedText(String input, int shift) {
         StringBuilder result = new StringBuilder();
-        if (Utils.isValid(input)) {
+        if (Utils.isValid(input) && shift != 0) {
             for (int i = 0; i < input.length(); i++) {
-                char currentChar = input.charAt(i);
-                result.append((char)(currentChar + shift));
+                if (input.charAt(i) >= VALUE_LOWER_A_IN_ASCII && input.charAt(i) <= VALUE_LOWER_Z_IN_ASCII) {
+                    char currentChar = (char) ((((input.charAt(i) - (VALUE_LOWER_A_IN_ASCII - shift)) % DIFF_A_AND_Z_LETTER) + VALUE_LOWER_A_IN_ASCII));
+                    result.append(currentChar);
+                }
             }
             return result.toString();
         }
