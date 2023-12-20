@@ -1,6 +1,7 @@
 package pl.sdacademy.java.basic.excercises.day3.task10;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Warrior {
     private final String name;
@@ -32,8 +33,11 @@ public class Warrior {
             return false;
         }
     }
-    private void attack(int damage) {
+    private void attack(int strength) {
+        Random randomStrength = new Random();
+        int damage = randomStrength.nextInt(strength);
         this.hp -= damage;
+        System.out.println(this.name + "has done: " + damage + " damage");
         System.out.println(this.name + " hp is: " + this.hp);
     }
     public void fight (Warrior warrior){
